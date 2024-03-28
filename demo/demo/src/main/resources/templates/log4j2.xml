@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration name="log4j2">
+    <appenders>
+        <console name="Console" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d{HH:mm:ss.SSS} %-5level [%thread] %logger{36} - %msg%n" />
+        </console>
+        <file name="MyFile" fileName="myapp.log">
+            <PatternLayout pattern="%d{HH:mm:ss.SSS} %-5level [%thread] %logger{36} - %msg%n" />
+        </file>
+    </appenders>
+
+    <loggers>
+        <root level="info">
+            <appenderRef ref="Console" />
+            <appenderRef ref="MyFile" />
+        </root>
+    </loggers>
+</configuration>

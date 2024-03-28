@@ -1,0 +1,753 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.4" xmlns="http://java.sun.com/xml/ns/j2ee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schzemaLocation="http://java.sun.com/xml/ns/j2ee
+	http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+	<servlet>
+		<description>This is the description of my J2EE component
+		</description>
+		<display-name>This is the display name of my J2EE component
+		</display-name>
+		<servlet-name>InitServlet</servlet-name>
+		<servlet-class>com.patientportal.util.InitServlet</servlet-class>
+		<init-param>
+			<param-name>config</param-name>
+			<param-value>/WEB-INF/config/system.properties</param-value>
+		</init-param>
+		<load-on-startup>0</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>InitServlet</servlet-name>
+		<url-pattern>/initservlet</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>ExportPDF</servlet-name>
+		<servlet-class>com.patientportal.exports.ExportPDF</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>ExportTXT</servlet-name>
+		<servlet-class>com.patientportal.exports.ExportTXT</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>ExportXLS</servlet-name>
+		<servlet-class>com.patientportal.exports.ExportXLS</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ExportPDF</servlet-name>
+		<url-pattern>/ExportPDF</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ExportTXT</servlet-name>
+		<url-pattern>/ExportTXT</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ExportXLS</servlet-name>
+		<url-pattern>/ExportXLS</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<description>This is the description of my J2EE component
+		</description>
+		<display-name>This is the display name of my J2EE component
+		</display-name>
+		<servlet-name>LogoutAction</servlet-name>
+		<servlet-class>com.patientportal.action.LogoutAction</servlet-class>
+	</servlet>
+	<servlet>
+		<description>This is the description of my J2EE component
+		</description>
+		<display-name>This is the display name of my J2EE component
+		</display-name>
+		<servlet-name>LoginAction</servlet-name>
+		<servlet-class>com.patientportal.action.LoginAction</servlet-class>
+	</servlet>
+	<servlet>
+		<description>This is the description of my J2EE component
+		</description>
+		<display-name>This is the display name of my J2EE component
+		</display-name>
+		<servlet-name>ChangePasswordAction</servlet-name>
+		<servlet-class>com.patientportal.action.ChangePasswordAction
+		</servlet-class>
+	</servlet>
+	<servlet>
+		<description>This is the description of my J2EE component
+		</description>
+		<display-name>This is the display name of my J2EE component
+		</display-name>
+		<servlet-name>RecoverPasswordAction</servlet-name>
+		<servlet-class>com.patientportal.action.RecoverPasswordAction
+		</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>LoginAction</servlet-name>
+		<url-pattern>/LoginAction</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>LogoutAction</servlet-name>
+		<url-pattern>/LogoutAction</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ChangePasswordAction</servlet-name>
+		<url-pattern>/ChangePasswordAction</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>RecoverPasswordAction</servlet-name>
+		<url-pattern>/RecoverPasswordAction</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<description>This is the description of my J2EE component
+		</description>
+		<display-name>This is the display name of my J2EE component
+		</display-name>
+		<servlet-name>AddAllergiesAction</servlet-name>
+		<servlet-class>com.patientportal.action.AddAllergiesAction
+		</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>AddAllergiesAction</servlet-name>
+		<url-pattern>/AddAllergiesAction</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<description>This is the description of my J2EE component
+		</description>
+		<display-name>This is the display name of my J2EE component
+		</display-name>
+		<servlet-name>ViewAllAllergiesAction</servlet-name>
+		<servlet-class>com.patientportal.action.ViewAllAllergiesAction
+		</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ViewAllAllergiesAction</servlet-name>
+		<url-pattern>/ViewAllAllergiesAction</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<description>This is the description of my J2EE component
+		</description>
+		<display-name>This is the display name of my J2EE component
+		</display-name>
+		<servlet-name>DeleteAllergiesAction</servlet-name>
+		<servlet-class>com.patientportal.action.DeleteAllergiesAction
+		</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>DeleteAllergiesAction</servlet-name>
+		<url-pattern>/DeleteAllergiesAction</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<description>This is the description of my J2EE component
+		</description>
+		<display-name>This is the display name of my J2EE component
+		</display-name>
+		<servlet-name>UpdateViewAllergiesAction</servlet-name>
+		<servlet-class>com.patientportal.action.UpdateViewAllergiesAction
+		</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>UpdateViewAllergiesAction</servlet-name>
+		<url-pattern>/UpdateViewAllergiesAction</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<description>This is the description of my J2EE component
+		</description>
+		<display-name>This is the display name of my J2EE component
+		</display-name>
+		<servlet-name>UpdateAllergiesAction</servlet-name>
+		<servlet-class>com.patientportal.action.UpdateAllergiesAction
+		</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>UpdateAllergiesAction</servlet-name>
+		<url-pattern>/UpdateAllergiesAction</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<description>This is the description of my J2EE component
+		</description>
+		<display-name>This is the display name of my J2EE component
+		</display-name>
+		<servlet-name>AddAppointmentAction</servlet-name>
+		<servlet-class>com.patientportal.action.AddAppointmentAction
+		</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>AddAppointmentAction</servlet-name>
+		<url-pattern>/AddAppointmentAction</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<description>This is the description of my J2EE component
+		</description>
+		<display-name>This is the display name of my J2EE component
+		</display-name>
+		<servlet-name>ViewAllAppointmentAction</servlet-name>
+		<servlet-class>com.patientportal.action.ViewAllAppointmentAction
+		</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ViewAllAppointmentAction</servlet-name>
+		<url-pattern>/ViewAllAppointmentAction</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<description>This is the description of my J2EE component
+		</description>
+		<display-name>This is the display name of my J2EE component
+		</display-name>
+		<servlet-name>DeleteAppointmentAction</servlet-name>
+		<servlet-class>com.patientportal.action.DeleteAppointmentAction
+		</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>DeleteAppointmentAction</servlet-name>
+		<url-pattern>/DeleteAppointmentAction</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<description>This is the description of my J2EE component
+		</description>
+		<display-name>This is the display name of my J2EE component
+		</display-name>
+		<servlet-name>UpdateViewAppointmentAction</servlet-name>
+		<servlet-class>com.patientportal.action.UpdateViewAppointmentAction
+		</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>UpdateViewAppointmentAction</servlet-name>
+		<url-pattern>/UpdateViewAppointmentAction</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<description>This is the description of my J2EE component
+		</description>
+		<display-name>This is the display name of my J2EE component
+		</display-name>
+		<servlet-name>UpdateAppointmentAction</servlet-name>
+		<servlet-class>com.patientportal.action.UpdateAppointmentAction
+		</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>UpdateAppointmentAction</servlet-name>
+		<url-pattern>/UpdateAppointmentAction</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<description>This is the description of my J2EE component
+		</description>
+		<display-name>This is the display name of my J2EE component
+		</display-name>
+		<servlet-name>AddHealthsummaryAction</servlet-name>
+		<servlet-class>com.patientportal.action.AddHealthsummaryAction
+		</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>AddHealthsummaryAction</servlet-name>
+		<url-pattern>/AddHealthsummaryAction</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<description>This is the description of my J2EE component
+		</description>
+		<display-name>This is the display name of my J2EE component
+		</display-name>
+		<servlet-name>ViewAllHealthsummaryAction</servlet-name>
+		<servlet-class>com.patientportal.action.ViewAllHealthsummaryAction
+		</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ViewAllHealthsummaryAction</servlet-name>
+		<url-pattern>/ViewAllHealthsummaryAction</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<description>This is the description of my J2EE component
+		</description>
+		<display-name>This is the display name of my J2EE component
+		</display-name>
+		<servlet-name>DeleteHealthsummaryAction</servlet-name>
+		<servlet-class>com.patientportal.action.DeleteHealthsummaryAction
+		</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>DeleteHealthsummaryAction</servlet-name>
+		<url-pattern>/DeleteHealthsummaryAction</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<description>This is the description of my J2EE component
+		</description>
+		<display-name>This is the display name of my J2EE component
+		</display-name>
+		<servlet-name>UpdateViewHealthsummaryAction</servlet-name>
+		<servlet-class>com.patientportal.action.UpdateViewHealthsummaryAction
+		</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>UpdateViewHealthsummaryAction</servlet-name>
+		<url-pattern>/UpdateViewHealthsummaryAction</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<description>This is the description of my J2EE component
+		</description>
+		<display-name>This is the display name of my J2EE component
+		</display-name>
+		<servlet-name>UpdateHealthsummaryAction</servlet-name>
+		<servlet-class>com.patientportal.action.UpdateHealthsummaryAction
+		</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>UpdateHealthsummaryAction</servlet-name>
+		<url-pattern>/UpdateHealthsummaryAction</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<description>This is the description of my J2EE component
+		</description>
+		<display-name>This is the display name of my J2EE component
+		</display-name>
+		<servlet-name>AddImmunizationAction</servlet-name>
+		<servlet-class>com.patientportal.action.AddImmunizationAction
+		</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>AddImmunizationAction</servlet-name>
+		<url-pattern>/AddImmunizationAction</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<description>This is the description of my J2EE component
+		</description>
+		<display-name>This is the display name of my J2EE component
+		</display-name>
+		<servlet-name>ViewAllImmunizationAction</servlet-name>
+		<servlet-class>com.patientportal.action.ViewAllImmunizationAction
+		</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ViewAllImmunizationAction</servlet-name>
+		<url-pattern>/ViewAllImmunizationAction</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<description>This is the description of my J2EE component
+		</description>
+		<display-name>This is the display name of my J2EE component
+		</display-name>
+		<servlet-name>DeleteImmunizationAction</servlet-name>
+		<servlet-class>com.patientportal.action.DeleteImmunizationAction
+		</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>DeleteImmunizationAction</servlet-name>
+		<url-pattern>/DeleteImmunizationAction</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<description>This is the description of my J2EE component
+		</description>
+		<display-name>This is the display name of my J2EE component
+		</display-name>
+		<servlet-name>UpdateViewImmunizationAction</servlet-name>
+		<servlet-class>com.patientportal.action.UpdateViewImmunizationAction
+		</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>UpdateViewImmunizationAction</servlet-name>
+		<url-pattern>/UpdateViewImmunizationAction</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<description>This is the description of my J2EE component
+		</description>
+		<display-name>This is the display name of my J2EE component
+		</display-name>
+		<servlet-name>UpdateImmunizationAction</servlet-name>
+		<servlet-class>com.patientportal.action.UpdateImmunizationAction
+		</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>UpdateImmunizationAction</servlet-name>
+		<url-pattern>/UpdateImmunizationAction</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<description>This is the description of my J2EE component
+		</description>
+		<display-name>This is the display name of my J2EE component
+		</display-name>
+		<servlet-name>AddInboxmailsAction</servlet-name>
+		<servlet-class>com.patientportal.action.AddInboxmailsAction
+		</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>AddInboxmailsAction</servlet-name>
+		<url-pattern>/AddInboxmailsAction</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<description>This is the description of my J2EE component
+		</description>
+		<display-name>This is the display name of my J2EE component
+		</display-name>
+		<servlet-name>ViewAllInboxmailsAction</servlet-name>
+		<servlet-class>com.patientportal.action.ViewAllInboxmailsAction
+		</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ViewAllInboxmailsAction</servlet-name>
+		<url-pattern>/ViewAllInboxmailsAction</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<description>This is the description of my J2EE component
+		</description>
+		<display-name>This is the display name of my J2EE component
+		</display-name>
+		<servlet-name>DeleteInboxmailsAction</servlet-name>
+		<servlet-class>com.patientportal.action.DeleteInboxmailsAction
+		</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>DeleteInboxmailsAction</servlet-name>
+		<url-pattern>/DeleteInboxmailsAction</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<description>This is the description of my J2EE component
+		</description>
+		<display-name>This is the display name of my J2EE component
+		</display-name>
+		<servlet-name>UpdateViewInboxmailsAction</servlet-name>
+		<servlet-class>com.patientportal.action.UpdateViewInboxmailsAction
+		</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>UpdateViewInboxmailsAction</servlet-name>
+		<url-pattern>/UpdateViewInboxmailsAction</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<description>This is the description of my J2EE component
+		</description>
+		<display-name>This is the display name of my J2EE component
+		</display-name>
+		<servlet-name>UpdateInboxmailsAction</servlet-name>
+		<servlet-class>com.patientportal.action.UpdateInboxmailsAction
+		</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>UpdateInboxmailsAction</servlet-name>
+		<url-pattern>/UpdateInboxmailsAction</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<description>This is the description of my J2EE component
+		</description>
+		<display-name>This is the display name of my J2EE component
+		</display-name>
+		<servlet-name>AddMedicationAction</servlet-name>
+		<servlet-class>com.patientportal.action.AddMedicationAction
+		</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>AddMedicationAction</servlet-name>
+		<url-pattern>/AddMedicationAction</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<description>This is the description of my J2EE component
+		</description>
+		<display-name>This is the display name of my J2EE component
+		</display-name>
+		<servlet-name>ViewAllMedicationAction</servlet-name>
+		<servlet-class>com.patientportal.action.ViewAllMedicationAction
+		</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ViewAllMedicationAction</servlet-name>
+		<url-pattern>/ViewAllMedicationAction</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<description>This is the description of my J2EE component
+		</description>
+		<display-name>This is the display name of my J2EE component
+		</display-name>
+		<servlet-name>DeleteMedicationAction</servlet-name>
+		<servlet-class>com.patientportal.action.DeleteMedicationAction
+		</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>DeleteMedicationAction</servlet-name>
+		<url-pattern>/DeleteMedicationAction</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<description>This is the description of my J2EE component
+		</description>
+		<display-name>This is the display name of my J2EE component
+		</display-name>
+		<servlet-name>UpdateViewMedicationAction</servlet-name>
+		<servlet-class>com.patientportal.action.UpdateViewMedicationAction
+		</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>UpdateViewMedicationAction</servlet-name>
+		<url-pattern>/UpdateViewMedicationAction</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<description>This is the description of my J2EE component
+		</description>
+		<display-name>This is the display name of my J2EE component
+		</display-name>
+		<servlet-name>UpdateMedicationAction</servlet-name>
+		<servlet-class>com.patientportal.action.UpdateMedicationAction
+		</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>UpdateMedicationAction</servlet-name>
+		<url-pattern>/UpdateMedicationAction</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<description>This is the description of my J2EE component
+		</description>
+		<display-name>This is the display name of my J2EE component
+		</display-name>
+		<servlet-name>AddPrescriptionAction</servlet-name>
+		<servlet-class>com.patientportal.action.AddPrescriptionAction
+		</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>AddPrescriptionAction</servlet-name>
+		<url-pattern>/AddPrescriptionAction</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<description>This is the description of my J2EE component
+		</description>
+		<display-name>This is the display name of my J2EE component
+		</display-name>
+		<servlet-name>ViewAllPrescriptionAction</servlet-name>
+		<servlet-class>com.patientportal.action.ViewAllPrescriptionAction
+		</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ViewAllPrescriptionAction</servlet-name>
+		<url-pattern>/ViewAllPrescriptionAction</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<description>This is the description of my J2EE component
+		</description>
+		<display-name>This is the display name of my J2EE component
+		</display-name>
+		<servlet-name>DeletePrescriptionAction</servlet-name>
+		<servlet-class>com.patientportal.action.DeletePrescriptionAction
+		</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>DeletePrescriptionAction</servlet-name>
+		<url-pattern>/DeletePrescriptionAction</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<description>This is the description of my J2EE component
+		</description>
+		<display-name>This is the display name of my J2EE component
+		</display-name>
+		<servlet-name>UpdateViewPrescriptionAction</servlet-name>
+		<servlet-class>com.patientportal.action.UpdateViewPrescriptionAction
+		</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>UpdateViewPrescriptionAction</servlet-name>
+		<url-pattern>/UpdateViewPrescriptionAction</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<description>This is the description of my J2EE component
+		</description>
+		<display-name>This is the display name of my J2EE component
+		</display-name>
+		<servlet-name>UpdatePrescriptionAction</servlet-name>
+		<servlet-class>com.patientportal.action.UpdatePrescriptionAction
+		</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>UpdatePrescriptionAction</servlet-name>
+		<url-pattern>/UpdatePrescriptionAction</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<description>This is the description of my J2EE component
+		</description>
+		<display-name>This is the display name of my J2EE component
+		</display-name>
+		<servlet-name>AddSentmailsAction</servlet-name>
+		<servlet-class>com.patientportal.action.AddSentmailsAction
+		</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>AddSentmailsAction</servlet-name>
+		<url-pattern>/AddSentmailsAction</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<description>This is the description of my J2EE component
+		</description>
+		<display-name>This is the display name of my J2EE component
+		</display-name>
+		<servlet-name>ViewAllSentmailsAction</servlet-name>
+		<servlet-class>com.patientportal.action.ViewAllSentmailsAction
+		</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ViewAllSentmailsAction</servlet-name>
+		<url-pattern>/ViewAllSentmailsAction</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<description>This is the description of my J2EE component
+		</description>
+		<display-name>This is the display name of my J2EE component
+		</display-name>
+		<servlet-name>DeleteSentmailsAction</servlet-name>
+		<servlet-class>com.patientportal.action.DeleteSentmailsAction
+		</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>DeleteSentmailsAction</servlet-name>
+		<url-pattern>/DeleteSentmailsAction</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<description>This is the description of my J2EE component
+		</description>
+		<display-name>This is the display name of my J2EE component
+		</display-name>
+		<servlet-name>UpdateViewSentmailsAction</servlet-name>
+		<servlet-class>com.patientportal.action.UpdateViewSentmailsAction
+		</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>UpdateViewSentmailsAction</servlet-name>
+		<url-pattern>/UpdateViewSentmailsAction</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<description>This is the description of my J2EE component
+		</description>
+		<display-name>This is the display name of my J2EE component
+		</display-name>
+		<servlet-name>UpdateSentmailsAction</servlet-name>
+		<servlet-class>com.patientportal.action.UpdateSentmailsAction
+		</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>UpdateSentmailsAction</servlet-name>
+		<url-pattern>/UpdateSentmailsAction</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<description>This is the description of my J2EE component
+		</description>
+		<display-name>This is the display name of my J2EE component
+		</display-name>
+		<servlet-name>AddTestresultsAction</servlet-name>
+		<servlet-class>com.patientportal.action.AddTestresultsAction
+		</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>AddTestresultsAction</servlet-name>
+		<url-pattern>/AddTestresultsAction</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<description>This is the description of my J2EE component
+		</description>
+		<display-name>This is the display name of my J2EE component
+		</display-name>
+		<servlet-name>ViewAllTestresultsAction</servlet-name>
+		<servlet-class>com.patientportal.action.ViewAllTestresultsAction
+		</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ViewAllTestresultsAction</servlet-name>
+		<url-pattern>/ViewAllTestresultsAction</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<description>This is the description of my J2EE component
+		</description>
+		<display-name>This is the display name of my J2EE component
+		</display-name>
+		<servlet-name>DeleteTestresultsAction</servlet-name>
+		<servlet-class>com.patientportal.action.DeleteTestresultsAction
+		</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>DeleteTestresultsAction</servlet-name>
+		<url-pattern>/DeleteTestresultsAction</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<description>This is the description of my J2EE component
+		</description>
+		<display-name>This is the display name of my J2EE component
+		</display-name>
+		<servlet-name>UpdateViewTestresultsAction</servlet-name>
+		<servlet-class>com.patientportal.action.UpdateViewTestresultsAction
+		</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>UpdateViewTestresultsAction</servlet-name>
+		<url-pattern>/UpdateViewTestresultsAction</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<description>This is the description of my J2EE component
+		</description>
+		<display-name>This is the display name of my J2EE component
+		</display-name>
+		<servlet-name>UpdateTestresultsAction</servlet-name>
+		<servlet-class>com.patientportal.action.UpdateTestresultsAction
+		</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>UpdateTestresultsAction</servlet-name>
+		<url-pattern>/UpdateTestresultsAction</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<description>This is the description of my J2EE component
+		</description>
+		<display-name>This is the display name of my J2EE component
+		</display-name>
+		<servlet-name>AddUserdetailsAction</servlet-name>
+		<servlet-class>com.patientportal.action.AddUserdetailsAction
+		</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>AddUserdetailsAction</servlet-name>
+		<url-pattern>/AddUserdetailsAction</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<description>This is the description of my J2EE component
+		</description>
+		<display-name>This is the display name of my J2EE component
+		</display-name>
+		<servlet-name>ViewAllUserdetailsAction</servlet-name>
+		<servlet-class>com.patientportal.action.ViewAllUserdetailsAction
+		</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ViewAllUserdetailsAction</servlet-name>
+		<url-pattern>/ViewAllUserdetailsAction</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<description>This is the description of my J2EE component
+		</description>
+		<display-name>This is the display name of my J2EE component
+		</display-name>
+		<servlet-name>DeleteUserdetailsAction</servlet-name>
+		<servlet-class>com.patientportal.action.DeleteUserdetailsAction
+		</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>DeleteUserdetailsAction</servlet-name>
+		<url-pattern>/DeleteUserdetailsAction</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<description>This is the description of my J2EE component
+		</description>
+		<display-name>This is the display name of my J2EE component
+		</display-name>
+		<servlet-name>UpdateViewUserdetailsAction</servlet-name>
+		<servlet-class>com.patientportal.action.UpdateViewUserdetailsAction
+		</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>UpdateViewUserdetailsAction</servlet-name>
+		<url-pattern>/UpdateViewUserdetailsAction</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<description>This is the description of my J2EE component
+		</description>
+		<display-name>This is the display name of my J2EE component
+		</display-name>
+		<servlet-name>UpdateUserdetailsAction</servlet-name>
+		<servlet-class>com.patientportal.action.UpdateUserdetailsAction
+		</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>UpdateUserdetailsAction</servlet-name>
+		<url-pattern>/UpdateUserdetailsAction</url-pattern>
+	</servlet-mapping>
+	
+	
+	
+	<welcome-file-list>
+		<welcome-file>./home.jsp</welcome-file>
+	</welcome-file-list>
+</web-app>

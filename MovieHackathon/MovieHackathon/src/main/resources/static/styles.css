@@ -1,0 +1,27 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    text-align: center;
+}
+
+form {
+    text-align: center;
+}
+
+button {
+    margin-left: 5px;
+}
+
+.movie {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.movie img {
+    max-width: 100%;
+    height: auto;
+}
